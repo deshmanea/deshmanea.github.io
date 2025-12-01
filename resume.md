@@ -1,6 +1,6 @@
 ---
 
-[Home](./index.md)
+[Home](index.md)
 
 ---
 title: My Resume          
