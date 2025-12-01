@@ -1,0 +1,20 @@
+# 👋 Welcome to My Machine Learning Journey
+
+Hi, I’m **Abhijit Deshmane** — got curious for deep learning fundamentals, transformer architectures, and building real-world ML systems.
+
+This site documents:
+
+- What I’m learning  
+- Notes from books/papers 
+- References that shaped my understanding
+  
+---
+
+## 📚 Sections
+
+- [About Me](./about.md)  
+- [References](./references.md)
+  
+---
+
+Thanks for visiting!
