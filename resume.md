@@ -3,7 +3,7 @@ title: My Resume
 layout: page
 ---
 
-<h1>[Home](./index.md)</h1>
+<a href="(./index.md)">home</a>
 
 <iframe 
     src="resume/Abhijit_Deshmane_ML_Resume.pdf"
