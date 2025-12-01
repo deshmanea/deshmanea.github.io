@@ -1,7 +1,8 @@
 ---
-title: My Resume
+title: My Resume          
 layout: page
 ---
+
 
 <iframe 
     src="resume/Abhijit_Deshmane_ML_Resume.pdf"
@@ -9,3 +10,5 @@ layout: page
     height="900px"
     style="border:none;">
 </iframe>
+
+[Home](./index.md)
