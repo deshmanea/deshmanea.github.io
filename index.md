@@ -12,7 +12,8 @@ This site documents:
 
 ## 📚 Sections
 
-- [About Me](./about.md)  
+- [About Me](./about.md)
+- [Resume](./resume.md)
 - [References](./references.md)
 - [When Left brain Neural Network want break](./hobby.md)
   
