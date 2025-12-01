@@ -1,8 +1,4 @@
 ---
-
-[Home](index.md)
-
----
 title: My Resume          
 layout: page
 ---
@@ -14,4 +10,4 @@ layout: page
     style="border:none;">
 </iframe>
 
-
+[Home](./index.md)
