@@ -10,4 +10,4 @@ layout: page
     style="border:none;">
 </iframe>
 
-[Home](https://deshmanea.github.io/)
+[Home](https://deshmanea.github.io)
