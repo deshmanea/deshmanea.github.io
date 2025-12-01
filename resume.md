@@ -1,9 +1,11 @@
 ---
+
+[Home](./index.md)
+
+---
 title: My Resume          
 layout: page
 ---
-
-<a href="(./index.md)">home</a>
 
 <iframe 
     src="resume/Abhijit_Deshmane_ML_Resume.pdf"
