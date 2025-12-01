@@ -22,8 +22,12 @@
 
 ![route](./sketch/route.jpg)
 
+![boat](./sketch/boat.jpg)
+
 ![shed](./sketch/shed.jpg)
 
 ![alone](./sketch/alone.jpg)
 
-![boat](./sketch/boat.jpg)
+Thank you 🤗 for scrolling till the end 
+
+[Home](./index.md)
