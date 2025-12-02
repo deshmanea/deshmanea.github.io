@@ -15,7 +15,7 @@ This site documents:
 - [About Me](./about.md)
 - [Resume](./resume.md)
 - [References](./references.md)
-- [When Left brain Neural Network want break](./hobby.md)
+- [When my Left brain Neural Network want break](./hobby.md)
   
 ---
 
