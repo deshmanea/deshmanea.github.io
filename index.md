@@ -13,6 +13,7 @@ This site documents:
 ## 📚 Sections
 
 - [About Me](./about.md)
+- [Notes](/notes.md)
 - [Resume](./resume.md)
 - [References](./references.md)
 - [When my Left brain Neural Network want break](./hobby.md)
