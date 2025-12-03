@@ -81,7 +81,7 @@ optim = torch.optim.SGD(params, lr=0.001, momentum=0.9, dampening=0, weight_deca
 
 ```
 
-We are relly rolling it pretty fast now, let's look for is there any way to do even better
+We are really rolling it pretty fast now, let's see if there are any way to do even better
 
 # Adaptive Algorithm
 
