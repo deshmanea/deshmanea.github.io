@@ -1,3 +1,5 @@
+# Optimization
+
 # First order optimization methods in ML (Gradient based)
 
 Why it's we need to bother about it at all !
@@ -210,4 +212,7 @@ _5 - [AdamW](https://optimization.cbe.cornell.edu/index.php?title=AdamW)_
 
 Thank you for seeing this through to the end 🙌
 
-[Notes](/notes.md)</p> [Home](./index.md)
+<div style="display: flex; justify-content: space-between; width: 100%; font-size: 1.1em;">
+  <a href="/notes" class="page-link">Notes</a>
+  <a href="/" class="page-link">Home</a>
+</div>
