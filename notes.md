@@ -4,6 +4,7 @@ Tried to put my understanding as I read and experience ML things. I have enjoyed
 
 # Machine learning
 
-- [Optimization Algorithms](/optimization.md)
+- [Optimization Algorithms](/articles/optimization.md)
+- [Transformer](/articles/transformer.md)
 
 [Home](./index.md)
