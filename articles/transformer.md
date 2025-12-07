@@ -15,6 +15,7 @@ Later, OpenAI extended the decoder part into a decoder-only Transformer, removin
 ## Brief Architecture
 
 ![alt text](image.png)
+
 _source - Attention is All You need_
 
 ### Attention
@@ -33,6 +34,7 @@ The model computes how much each token should “attend to” every other token 
 Multi-Head Attention repeats this process across several attention heads, allowing the model to capture different types of relationships in parallel.
 
 ![alt text](transform20fps.gif)
+
 _source - [Google research blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)_
 
 ### Tokenization
