@@ -1,11 +1,11 @@
-# 👋 Welcome to My Machine Learning Journey
+# Machine Learning & AI — Notes, Projects, and Research
 
-Hi, I’m **Abhijit Deshmane** — got curious for deep learning fundamentals, transformer architectures, and building real-world ML systems.
+Hi, I’m Abhijit Deshmane. I focus on deep learning fundamentals, transformer architectures, and building real-world machine learning systems.
 
 This site documents:
 
-- What I’m learning
 - Notes from books/papers
+- Resume
 - References that shaped my understanding
 
 ---
