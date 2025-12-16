@@ -1,4 +1,4 @@
-# Machine Learning & AI — Notes, Projects, and Research
+# Machine Learning & AI — Notes and Projects
 
 Hi, I’m Abhijit Deshmane. I focus on deep learning fundamentals, transformer architectures, and building real-world machine learning systems.
 
