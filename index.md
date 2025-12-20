@@ -14,7 +14,7 @@ This site documents:
 
 ### 🔹rag-wiki
 
-This project fetches latest wiki pages and use thenm to find relevant information so we can skip expensive fine tuning. It can be scaled and to multiple file formats and various domains
+This project dynamically fetches latest wiki pages and use them to find relevant information so we can skip expensive fine tuning. It can be scaled and to multiple file formats and various domains
 
 [➡️ rag-wiki](https://github.com/deshmanea/rag-wiki.git)
 
