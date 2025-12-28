@@ -6,6 +6,8 @@
 
 ![temple](./sketch/temple.jpg)
 
+![tree_study](./sketch/tree_subject.png)
+
 ![temple_colour](./sketch/temple_colour.jpg)
 
 ![window](./sketch/window.jpg)
@@ -28,6 +30,6 @@
 
 ![alone](./sketch/alone.jpg)
 
-Thank you 🤗 for scrolling till the end 
+Thank you 🤗 for scrolling till the end
 
 [Home](./index.md)
