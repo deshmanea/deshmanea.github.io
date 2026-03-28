@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformer Internals | Abhijit Deshmane</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="article-mode">
+    <div class="article-container">
+      <a href="../index.html#notes" class="back-nav"
+        >← [ BACK_TO_SYSTEM_DASHBOARD ]</a
+      >
+
+      <header class="article-header">
+        <h1 class="project-title">Transformer Architecture</h1>
+        <div class="note-tag">// DEEP_LEARNING_CORE // NLP_INTERNALS</div>
+      </header>
+
+      <section class="abstract">
+        <p>
+          The Transformer is a neural network architecture designed to model
+          relationships in sequences without using recurrence (RNNs). It relies
+          entirely on attention mechanisms to transform input sequences into
+          richer and more meaningful representations.
+        </p>
+      </section>
+
+      <section>
+        <h2>// HISTORY</h2>
+        <p>
+          In 2015, researchers began using additive and multiplicative (Luong)
+          attention alongside RNNs. By 2017, the Google "Transformer" team
+          introduced self-attention, completely removing RNNs and introducing
+          masked self-attention for autoregressive generation. OpenAI later
+          extended this into decoder-only models, removing the encoder and
+          cross-attention entirely.
+        </p>
+      </section>
+
+      <section>
+        <h2>// BRIEF_ARCHITECTURE</h2>
+
+        <div class="media-container">
+          <img
+            src="image.png"
+            alt="Transformer Architecture Diagram"
+            style="
+              width: 100%;
+              border: 1px solid var(--border-dim);
+              border-radius: 4px;
+            "
+          />
+          <p class="caption">_source: Attention is All You Need</p>
+        </div>
+
+        <h2>Attention Mechanism</h2>
+
+        <div class="media-container">
+          <h4
+            style="
+              font-family: var(--mono-font);
+              font-size: 11px;
+              color: #8b949e;
+              margin-bottom: 10px;
+            "
+          >
+            // LIVE_ATTENTION_VISUALIZATION
+          </h4>
+          <img
+            src="transform20fps.gif"
+            alt="Transformer Attention Animation"
+            style="
+              width: 100%;
+              border: 1px solid var(--accent-green);
+              border-radius: 4px;
+              opacity: 0.9;
+            "
+          />
+          <p class="caption">
+            _source:
+            <a
+              href="https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/"
+              >Google Research Blog</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>// CORE_COMPONENTS</h2>
+
+        <h3>Attention Mechanism</h3>
+        <p>
+          Attention is the core idea where each token is projected into three
+          vectors: <strong>Query (Q)</strong>, <strong>Key (K)</strong>, and
+          <strong>Value (V)</strong>. The model computes how much each token
+          should “attend to” others by comparing queries to keys and mixing
+          values accordingly.
+        </p>
+        <p>
+          Multi-Head Attention repeats this process across several attention
+          heads, allowing the model to capture different types of relationships
+          in parallel.
+        </p>
+
+        <h3>Tokenization Strategies</h3>
+        <p>
+          A way of representing words in compact form for efficient computation.
+          Common strategies include:
+        </p>
+        <ul class="spec-list">
+          <li>Character-level and Word-level tokens.</li>
+          <li>
+            Subword tokens (BPE, WordPiece, SentencePiece) — these handle rare
+            words efficiently and are most widely used today.
+          </li>
+        </ul>
+
+        <h3>Positional Encoding</h3>
+        <p>
+          Since Transformers process tokens in parallel, position must be
+          tracked. Methods include Absolute, Relative, and
+          <strong>RoPE (Rotary Positional Embedding)</strong>. RoPE rotates Q
+          and K vectors in multi-dimensional space using frequency-based
+          rotation matrices rather than full sinusoidal cycles.
+        </p>
+      </section>
+
+      <section>
+        <h2>// ARCHITECTURE_DYNAMICS</h2>
+
+        <div class="grid-layout">
+          <div class="column">
+            <h3>The Encoder</h3>
+            <p>
+              Designed for deep context, enabling tasks like NER and QA. It uses
+              bidirectional attention, allowing tokens to attend to all others
+              in the sequence.
+            </p>
+          </div>
+          <div class="column">
+            <h3>The Decoder</h3>
+            <p>
+              Uses masked self-attention to prevent seeing future tokens during
+              training. GPT-style models use only stacked masked self-attention
+              blocks, removing cross-attention entirely.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>// UTILITY_LOG</h2>
+        <ul class="spec-list">
+          <li><strong>Parallelism:</strong> Faster training than RNNs.</li>
+          <li>
+            <strong>Global Receptive Field:</strong> Every token sees the entire
+            sequence.
+          </li>
+          <li>
+            <strong>Scalability:</strong> Scales extremely well with data and
+            compute.
+          </li>
+          <li>
+            <strong>General-Purpose:</strong> Works for text, vision, audio, and
+            multimodal tasks.
+          </li>
+        </ul>
+      </section>
+
+      <footer class="references">
+        <h3>[ REFERENCES ]</h3>
+        <ol>
+          <li>
+            <a href="https://arxiv.org/pdf/1706.03762"
+              >Attention Is All You Need</a
+            >
+          </li>
+          <li>
+            <a href="https://arxiv.org/pdf/1508.04025"
+              >Effective Approaches to Attention-based NMT</a
+            >
+          </li>
+          <li>
+            <a href="https://arxiv.org/pdf/1409.0473"
+              >Neural Machine Translation By Jointly Learning To Align And
+              Translate</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/"
+              >Transformer: A Novel Neural Network Architecture for Language
+              Understanding</a
+            >
+          </li>
+        </ol>
+      </footer>
+    </div>
+  </body>
+</html>

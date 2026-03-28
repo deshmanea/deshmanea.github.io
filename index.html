@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhijit — AI/ML Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#notes">Notes</a>
+          <a href="#resume">Resume</a>
+          <a href="#references">References</a>
+          <a href="#about">About Me</a>
+        </nav>
+
+        <p class="creative">when my left brain neural network want break</p>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="content">
+        <h1>Abhijit Deshmane</h1>
+        <h2>Real-time Perception Systems Engineer</h2>
+
+        <section id="projects">
+          <h2 class="section-header">Projects</h2>
+
+          <div class="project-entry">
+            <h3 class="project-title">ROS2_PERCEPTION_PIPELINE</h3>
+
+            <div class="badge-container">
+              <span class="status-badge">RTX 4070</span>
+              <span class="status-badge">4.5ms Latency</span>
+              <span class="status-badge">220 FPS</span>
+              <span class="status-badge">TensorRT 10.x</span>
+            </div>
+
+            <p>
+              GPU-accelerated perception pipeline optimized for low-latency
+              robotics.
+            </p>
+
+            <ul class="spec-list">
+              <li>
+                <strong>Optimization:</strong> End-to-end latency reduced from
+                21ms to 4.5ms (4.6x gain).
+              </li>
+              <li>
+                <strong>Hardware:</strong> Targeted for NVIDIA RTX 4070 SUPER /
+                Jetson Orin.
+              </li>
+              <li>
+                <strong>Architecture:</strong> Zero-copy memory buffers via ROS
+                2 Jazzy Lifecycle Nodes.
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/deshmanea/perception_robotics.git"
+                target="_blank"
+                >[SOURCE_CODE]</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3 class="project-title">AGENTIC_QA_AUTONOMY</h3>
+            <div class="badge-container">
+              <span class="status-badge">LangGraph</span>
+              <span class="status-badge">MCP Tools</span>
+              <span class="status-badge">Closed-Loop</span>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <strong>Design:</strong> Multi-node autonomous pipeline for
+                failure detection and automated "Golden Dataset" updates.
+              </li>
+              <li>
+                <strong>Logic:</strong> Implemented self-healing retry logic
+                with LLM-based root-cause analysis from logs.
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/deshmanea/lang-graph-mcp.git"
+                target="_blank"
+                >[SOURCE_CODE]</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3 class="project-title">TRANSFORMER_CORE_IMPLEMENTATION</h3>
+            <div class="badge-container">
+              <span class="status-badge">PyTorch</span>
+              <span class="status-badge">Causal Masking</span>
+              <span class="status-badge">Next-Token Pred</span>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <strong>Implementation:</strong> Built GPT-style decoder,
+                multi-head attention, and positional encoding from first
+                principles.
+              </li>
+              <li>
+                <strong>Optimization:</strong> Developed batching strategies and
+                attention map visualizations for model interpretability.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3 class="project-title">RAG_WIKI_ENGINE</h3>
+            <div class="badge-container">
+              <span class="status-badge">CPU-Optimized</span>
+              <span class="status-badge">Lightweight LLM</span>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <strong>Constraint:</strong> Engineered a retrieval-augmented
+                generation pipeline optimized for memory-limited environments.
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/deshmanea/rag-wiki.git"
+                target="_blank"
+                >[SOURCE_CODE]</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3 class="project-title">SAGAX_LORA</h3>
+            <div class="badge-container">
+              <span class="status-badge">CPU-Optimized</span>
+              <span class="status-badge">Lightweight LLM</span>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <strong>Constraint:</strong> Engineered a retrieval-augmented
+                generation pipeline optimized for memory-limited environments.
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/deshmanea/sagax-lora.git"
+                target="_blank"
+                >[SOURCE_CODE]</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3 class="project-title">EXTRACTIVE_QA_SQUAD</h3>
+            <div class="badge-container">
+              <span class="status-badge">BERT/RoBERTa</span>
+              <span class="status-badge">F1: 64.9%</span>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <strong>Fine-tuning:</strong> Optimized DistilBERT on SQuAD with
+                sliding-window tokenization and precise span alignment.
+              </li>
+              <li>
+                <strong>Evaluation:</strong> Analyzed performance trade-offs
+                across multiple transformer architectures and hyperparameters.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/deshmanea/finetune_model_qa.git"
+              target="_blank"
+              >[SOURCE_CODE]</a
+            >
+          </div>
+        </section>
+
+        <section id="notes">
+          <h2>Notes</h2>
+
+          <p class="muted">
+            Documenting my journey through ML internals. It’s been a cycle of
+            deep enjoyment and
+            <em>"gradient descent failures"</em> as I pull these concepts
+            together.
+          </p>
+
+          <div class="notes-grid">
+            <a href="articles/transformer.html" class="note-card">
+              <div class="note-tag">DEEP_LEARNING / NLP</div>
+              <h4 class="note-title">TRANSFORMER_INTERNALS</h4>
+              <p class="note-description">
+                ↳ Attention mechanisms, RoPE, and architectural evolution from
+                RNNs.
+              </p>
+            </a>
+
+            <a href="articles/optimization.html" class="note-card">
+              <div class="note-tag">MATHEMATICS / COMPUTE</div>
+              <h4 class="note-title">OPTIMIZATION_ALGORITHMS</h4>
+              <p class="note-description">
+                ↳ From SGD to AdamW: A deep dive into first-order and adaptive
+                gradient methods.
+              </p>
+            </a>
+          </div>
+        </section>
+
+        <section id="resume">
+          <h2>Resume</h2>
+          <div
+            class="resume-card"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 30px;
+              border: 1px solid #30363d;
+              border-radius: 4px;
+              background: rgba(166, 226, 46, 0.02);
+            "
+          >
+            <div>
+              <h3
+                style="
+                  margin: 0;
+                  color: var(--accent-green);
+                  font-family: var(--mono-font);
+                "
+              >
+                Abhijit_Deshmane_CV.pdf
+              </h3>
+            </div>
+
+            <div class="resume-actions">
+              <a
+                href="resume.html"
+                class="note-card"
+                style="
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  margin-right: 10px;
+                  display: inline-block;
+                "
+              >
+                [ VIEW_INTERACTIVE ]
+              </a>
+              <a
+                href="resume/Abhijit_Deshmane_ML_Resume.pdf"
+                download
+                class="note-card"
+                style="
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  border-color: var(--accent-green);
+                  color: var(--accent-green);
+                  display: inline-block;
+                "
+              >
+                [ DOWNLOAD_PDF ]
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+          <p class="muted">
+            A curated collection of resources fueling my transition from
+            Automation QA to AI Research.
+          </p>
+
+          <div
+            class="grid-layout"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 30px;
+              margin-top: 30px;
+            "
+          >
+            <div class="reference-category">
+              <h3
+                style="
+                  color: var(--accent-green);
+                  font-family: var(--mono-font);
+                  border-bottom: 1px solid #30363d;
+                  padding-bottom: 10px;
+                "
+              >
+                [ BOOKS ]
+              </h3>
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  font-size: 14px;
+                  line-height: 1.8;
+                "
+              >
+                <li>
+                  <strong style="color: #8b949e">MATH:</strong> Linear Algebra
+                  (Strang, Axler), Calculus (Thompson), Stats (Casella & Berger)
+                </li>
+                <li>
+                  <strong style="color: #8b949e">ANALYSIS:</strong>
+                  Understanding Analysis (Abbott), Analysis 1 & 2 (Tao), Rudin
+                </li>
+                <li>
+                  <strong style="color: #8b949e">AI/ML:</strong> Pattern
+                  Recognition (Bishop), Probabilistic ML (Murphy), Goodfellow
+                </li>
+                <li>
+                  <strong style="color: #8b949e">MLOPS:</strong> AI Engineering
+                  (Huyen), Practical MLOps (Deza)
+                </li>
+              </ul>
+            </div>
+
+            <div class="reference-category">
+              <h3
+                style="
+                  color: var(--accent-green);
+                  font-family: var(--mono-font);
+                  border-bottom: 1px solid #30363d;
+                  padding-bottom: 10px;
+                "
+              >
+                [ RESEARCH ]
+              </h3>
+              <div
+                class="notes-grid"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  margin-top: 15px;
+                "
+              >
+                <a
+                  href="https://arxiv.org/"
+                  class="note-card"
+                  style="text-decoration: none; padding: 10px"
+                  >↳ arXiv_Preprints</a
+                >
+                <a
+                  href="https://research.google/pubs/"
+                  class="note-card"
+                  style="text-decoration: none; padding: 10px"
+                  >↳ Google_Research</a
+                >
+                <a
+                  href="https://papers.nips.cc/"
+                  class="note-card"
+                  style="text-decoration: none; padding: 10px"
+                  >↳ NeurIPS_Proceedings</a
+                >
+              </div>
+            </div>
+
+            <div class="reference-category">
+              <h3
+                style="
+                  color: var(--accent-green);
+                  font-family: var(--mono-font);
+                  border-bottom: 1px solid #30363d;
+                  padding-bottom: 10px;
+                "
+              >
+                [ LECTURES ]
+              </h3>
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  font-size: 14px;
+                  line-height: 1.8;
+                "
+              >
+                <li>
+                  <a
+                    href="https://www.youtube.com/@3blue1brown"
+                    style="color: #ccc; text-decoration: none"
+                    >↳ 3Blue1Brown (Intuition)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC"
+                    style="color: #ccc; text-decoration: none"
+                    >↳ Stanford CS231n</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ"
+                    style="color: #ccc; text-decoration: none"
+                    >↳ Karpathy: Zero to Hero</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h"
+                    style="color: #ccc; text-decoration: none"
+                    >↳ Boyd: Convex Optimization</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 40px;
+              padding: 20px;
+              border: 1px solid #30363d;
+              background: rgba(166, 226, 46, 0.02);
+            "
+          >
+            <h3
+              style="
+                color: var(--accent-green);
+                font-family: var(--mono-font);
+                border-bottom: 1px solid #30363d;
+                padding-bottom: 10px;
+              "
+            >
+              CORE_INFLUENCERS
+            </h3>
+            <p style="color: #ccc; font-size: 14px; text-decoration: none">
+              <strong>AI:</strong> Hinton, Karpathy, Sutskever, Ng, Fei-Fei Li
+              <br />
+              <strong>MATH:</strong> Sanderson, Tao, Perelman
+            </p>
+          </div>
+        </section>
+
+        <section id="about">
+          <h2>About Me</h2>
+
+          <div
+            class="about-grid"
+            style="display: grid; grid-template-columns: 1fr 250px; gap: 40px"
+          >
+            <div class="about-text">
+              <p>
+                I’m <strong>Abhijit Deshmane</strong>,
+                <i
+                  >a professional with 15 years of industry experience across 8
+                  companies. I am currently engineering the transition from
+                  standard automation to</i
+                >
+                <strong>Real-time AI Perception Systems</strong
+                ><i
+                  >—moving models from research papers to high-performance
+                  hardware.</i
+                >
+              </p>
+
+              <!--   -->
+              <ul
+                class="spec-list"
+                style="list-style: none; padding: 0; line-height: 1.8"
+              >
+                <li>
+                  <strong>First Principles:</strong> Prioritizing mathematical
+                  intuition over memorization.
+                </li>
+                <li>
+                  <strong>Systems Thinking:</strong> Focus on building scalable,
+                  real-world robotics pipelines.
+                </li>
+                <li>
+                  <strong>Hands-on Research:</strong> Implementing transformers
+                  and optimizers from scratch to master inner workings.
+                </li>
+                <li>
+                  <strong>High-Performance:</strong> Optimizing for GPU
+                  execution and low-latency inference.
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="tech-sidebar"
+              style="border-left: 1px solid #30363d; padding-left: 20px"
+            >
+              <h4
+                style="
+                  font-family: var(--mono-font);
+                  font-size: 14px;
+                  margin-bottom: 15px;
+                "
+              >
+                [ TECHNICAL_FOCUS ]
+              </h4>
+              <div
+                style="
+                  font-size: 13px;
+                  color: #8b949e;
+                  line-height: 2.2;
+                  font-family: var(--mono-font);
+                "
+              >
+                <code style="color: var(--accent-green)">01 - </code> Robotics
+                (ROS 2 Jazzy)<br />
+                <code style="color: var(--accent-green)">02 - </code> TensorRT &
+                CUDA<br />
+                <code style="color: var(--accent-green)">03 - </code> LLM
+                Internals<br />
+                <code style="color: var(--accent-green)">04 - </code> Deep
+                Learning Math<br />
+                <code style="color: var(--accent-green)">05 - </code> Linear
+                Algebra<br />
+                <code style="color: var(--accent-green)">06 - </code> ML System
+                Design<br />
+                <code style="color: var(--accent-green)">07 - </code> GPU
+                Optimization
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+  // 1. Smooth Scrolling
+  document.querySelectorAll(".sidebar a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // 2. Active Section Highlighting
+  window.addEventListener("scroll", () => {
+    let current = "";
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    document.querySelectorAll(".sidebar a").forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === `#${current}`) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>

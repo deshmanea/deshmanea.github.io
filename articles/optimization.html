@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimization Internals | Abhijit Deshmane</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="article-mode">
+    <div class="article-container">
+      <a href="../index.html#notes" class="back-nav"
+        >← [ BACK_TO_SYSTEM_DASHBOARD ]</a
+      >
+
+      <header class="article-header">
+        <h1 class="project-title">Optimization Algorithms</h1>
+        <div class="note-tag">
+          // GRADIENT_DESCENT // ADAPTIVE_LEARNING // COMPUTE_EFFICIENCY
+        </div>
+      </header>
+
+      <section class="abstract">
+        <p>
+          Why do we need to bother about optimization at all? Because if we are
+          convinced that a model needs to learn, we must think about the most
+          efficient way it can update its weights.
+        </p>
+      </section>
+
+      <section>
+        <h2>// FIRST_ORDER_METHODS</h2>
+        <p>
+          These are gradient-based methods that form the backbone of modern
+          Machine Learning.
+        </p>
+
+        <h3>Stochastic Gradient Descent (SGD)</h3>
+        <p>
+          Pure SGD is a classic algorithm, though it is rarely used in its basic
+          form today. "Stochastic" refers to the randomness introduced by
+          training on a subset (mini-batch) of data.
+        </p>
+
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-title">#SGD_LOGIC</span>
+          </div>
+          <pre><code># Key Pseudo Structure
+while not converge:
+    w = w - learning_rate * weight_error
+    n = (n + 1) % N
+return w</code></pre>
+        </div>
+
+        <h3>Momentum</h3>
+        <p>
+          Borrowed from physics, this component dampens oscillations in steep
+          directions while accumulating velocity in shallow directions to speed
+          up learning.
+        </p>
+
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-title">#MOMENTUM_LOGIC</span>
+          </div>
+          <pre><code># Momentum Logic
+velocity = mu * velocity - learning_rate * grad
+w = w + velocity</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>// ADAPTIVE_ALGORITHMS</h2>
+        <p>
+          These algorithms allocate separate, automatically adapting learning
+          rates for different parameters, giving them a significant edge over
+          basic methods.
+        </p>
+
+        <h3>AdaGrad & RMSprop</h3>
+        <p>
+          <strong>AdaGrad</strong> scales learning rate based on the sum of
+          squared gradients, but the accumulation can cause learning to stop
+          prematurely. <strong>RMSprop</strong> addresses this by using a "leaky
+          cache" that prioritizes recent history.
+        </p>
+
+        <h3>Adam & AdamW</h3>
+        <p>
+          <strong>Adam</strong> combines Momentum and RMSprop. To prevent
+          overfitting, <strong>AdamW</strong> decouples weight decay from the
+          gradient update—it is currently the standard for training most LLMs.
+        </p>
+
+                    <div class="code-window">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-title">#ADAMW_LOGIC</span>
+          </div>
+        <pre><code># AdamW Logic
+m = d1 * m + (1 - d1) * grad           # Momentum
+v = d2 * v + (1 - d2) * (grad**2)      # RMSprop
+w -= l * m / (sqrt(v) + 1e-7)          # Update with bias correction
+w -= l * rho * w                       # Decoupled Weight Decay</code></pre>
+      </section>
+
+      <section>
+    <h2>// LEARNING_RATE_SCHEDULING</h2>
+    <p>
+        A static learning rate is rarely optimal. We need to "switch gears" depending on the stage of learning—starting fast to escape local minima and slowing down to settle into the global optimum.
+    </p>
+
+    <div class="preference-path">
+        <strong>Core Concept:</strong> High LR (Exploration) → Low LR (Exploitation/Refinement)
+    </div>
+
+    <div class="grid-layout">
+        <div class="column">
+            <h3>Step Decay</h3>
+            <p>Reduces the rate by a specific factor (e.g., 0.5) every few epochs. Simple, but can cause abrupt "shocks" to the gradients.</p>
+        </div>
+        <div class="column">
+            <h3>Exponential Decay</h3>
+            <p>Mathematically smoothed: $\alpha = \alpha_0 e^{-kt}$. This is empirically favored for its consistent stabilization of training.</p>
+        </div>
+    </div>
+
+    <div class="code-window">
+        <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-title">// PYTORCH_SCHEDULER_EXAMPLE</span>
+        </div>
+        <pre><code># StepLR: Decays the learning rate of each parameter group 
+# by gamma every step_size epochs.
+scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
+
+for epoch in range(100):
+    train(...)
+    validate(...)
+    scheduler.step() # Update the rate</code></pre>
+    </div>
+
+    <h3>1/t Decay</h3>
+    <p>Reduces the rate following the factor $1/(1 + kt)$. It provides a very aggressive initial drop that mellows out over time.</p>
+</section>
+
+      <section>
+        <h2>// SECOND_ORDER_METHODS</h2>
+        <p>
+          These involve Gradient + Hessian calculations, such as the
+          <strong>Newton Method</strong> or <strong>L-BFGS</strong>.
+        </p>
+
+        <div
+          style="
+            border-left: 2px solid #ff4444;
+            padding: 20px;
+            background: rgba(255, 68, 68, 0.05);
+            margin: 30px 0;
+          "
+        >
+          <h4 style="margin-top: 0; color: #ff4444">// SCALABILITY_BLOCKER</h4>
+          <p style="font-size: 14px; margin-bottom: 0">
+            While these converge faster, they are impractical for Deep Learning.
+            A billion-parameter model would require a billion-by-billion Hessian
+            matrix ($O(n^2)$), making inversion computationally impossible.
+          </p>
+        </div>
+      </section>
+
+      <footer class="references">
+        <h3>[ REFERENCES ]</h3>
+        <ol>
+          <li>Deep Learning - Christopher and Huge Bishop</li>
+          <li>Deep Learning - Ian Goodfellow</li>
+          <li>Convex Optimization - Stephen Boyd</li>
+          <li>CS231n Winter 2016: Lecture 6</li>
+          <li>AdamW Implementation</li>
+        </ol>
+        <p style="margin-top: 20px">
+          Thank you for seeing this through to the end 🙌
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
