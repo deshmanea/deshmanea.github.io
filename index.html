@@ -593,29 +593,32 @@
 </html>
 <script>
   // 1. Smooth Scrolling
-  document.querySelectorAll(".sidebar a").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      document.querySelector(targetId).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-
-  // 2. Active Section Highlighting
   window.addEventListener("scroll", () => {
     let current = "";
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section, #right-brain, #hobby"); // Ensure your ID is included
+    const navLinks = document.querySelectorAll(".sidebar nav a");
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 100) {
-        current = section.getAttribute("id");
-      }
-    });
+    // 1. Check if we are at the very bottom of the page
+    const isAtBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
 
-    document.querySelectorAll(".sidebar a").forEach((a) => {
+    if (isAtBottom) {
+      // Force the last link to be active
+      current = navLinks[navLinks.length - 1]
+        .getAttribute("href")
+        .replace("#", "");
+    } else {
+      // 2. Standard scroll calculation for other sections
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute("id");
+        }
+      });
+    }
+
+    // 3. Apply the active class
+    navLinks.forEach((a) => {
       a.classList.remove("active");
       if (a.getAttribute("href") === `#${current}`) {
         a.classList.add("active");
